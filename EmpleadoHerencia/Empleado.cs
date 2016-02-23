@@ -74,12 +74,13 @@ namespace EmpleadoHerencia
         }
 
         // Métodos
-        public void DarBono(double cantidad)
+        // Este método puede ser "sobreescrito"por una clase derivada
+        public virtual void DarBono(double cantidad)
         {
             salarioActual += cantidad;
         }
 
-        public void DesplegarEstado()
+        public virtual void DesplegarEstado()
         {
             Console.WriteLine("Nombre: {0}", Nombre);
             Console.WriteLine("Identidad: {0}", Id);
