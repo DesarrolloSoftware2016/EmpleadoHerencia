@@ -86,11 +86,25 @@ namespace EmpleadoHerencia
             Console.WriteLine("Identidad: {0}", Id);
             Console.WriteLine("Edad: {0}", Edad);
             Console.WriteLine("Salario: {0}", Pago);
+            Console.WriteLine("El coste de los beneficios: {0}", beneficiosEmpleado.CobrarDeducciones());
         }
 
         // Un empleado contiene un paquete de beneficios
         // a esta relación de herencia se le conoce como delegación/agregación
         // Los dos tipos de herencia C# (is a - has a)
         protected PaqueteBeneficios beneficiosEmpleado = new PaqueteBeneficios();
+
+        // Exponer ciertos comportamientos del objeto PaqueteBeneficios
+        public double GetCostoBeneficios()
+        {
+            return beneficiosEmpleado.CobrarDeducciones();
+        }
+
+        // Exponer comportamientos del objeto mediante propiedades
+        public PaqueteBeneficios Beneficios
+        {
+            get { return beneficiosEmpleado; }
+            set { beneficiosEmpleado = value; }
+        }
     }
 }

@@ -48,6 +48,8 @@
     <Compile Include="PaqueteBeneficios.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Vendedor.cs" />
+    <Compile Include="VendedorMedioTiempo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
